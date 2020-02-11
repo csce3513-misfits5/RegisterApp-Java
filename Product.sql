@@ -36,8 +36,7 @@ RETURNING id, createdon;
 
 --Sprint 1 Additions
 SELECT * FROM product; --Query all product information in database
-UPDATE product SET lookupcode = ‘misfits5-app’ WHERE id =
-‘100’; 
+UPDATE product SET lookupcode = misfits5-app
 
 --SELECT * FROM product;
 
