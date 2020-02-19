@@ -1,6 +1,7 @@
  # Basic description
 Browser based register application that interacts with a PostgreSQL database. Implemented in Java with Spring Boot and JPA. Edited in Visual Studio Code.  
   // Practicing making a commit with a pull request
+  // How does this work
 
 The application defaults to port 8080.
 
