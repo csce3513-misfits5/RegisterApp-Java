@@ -34,6 +34,7 @@ public class EmployeeDetailRouteController extends BaseRouteController {
 
 		return new ModelAndView(ViewModelNames.EMPLOYEE_TYPES.getValue()); //EMPLOYEE_TYPES errors will go away once employee table is created.
 	}
+	//test comment
 
 	@RequestMapping(value = "/{employeeId}", method = RequestMethod.GET)
 	public ModelAndView startWithEmployee(
