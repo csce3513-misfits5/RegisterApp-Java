@@ -32,9 +32,8 @@ public class EmployeeDetailRouteController extends BaseRouteController {
 		// TODO: Logic to determine if the user associated with the current session
 		//  is able to create an employee
 
-		return new ModelAndView(ViewModelNames.EMPLOYEE_TYPES.getValue()); //EMPLOYEE_TYPES errors will go away once employee table is created.
+		return new ModelAndView(ViewModelNames.EMPLOYEE_TYPES.getValue()); //File will continue to show errors except when deployed because DB is hosted from heroku.
 	}
-	//test comment 2
 
 	@RequestMapping(value = "/{employeeId}", method = RequestMethod.GET)
 	public ModelAndView startWithEmployee(
