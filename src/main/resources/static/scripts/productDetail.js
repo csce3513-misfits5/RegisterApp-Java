@@ -46,7 +46,7 @@ function saveActionClick(event) {
 	const productIdIsDefined = ((productId != null) && (productId.trim() !== ""));
 	const saveActionUrl = ("/api/product/"
 		+ (productIdIsDefined ? productId : ""));
-	const saveProductRequest = {
+	const saveProductRequest = { //build JSON object JC
 		id: productId,
 		count: getProductCount(),
 		lookupCode: getProductLookupCode()

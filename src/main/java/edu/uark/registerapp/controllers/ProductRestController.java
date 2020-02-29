@@ -5,7 +5,7 @@ import java.util.UUID;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.commons.lang3.StringUtils; //Added this for StringUtils.EMPTY
+import org.apache.commons.lang3.StringUtils; //Added this for StringUtils.EMPTY JC
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -21,7 +21,7 @@ import edu.uark.registerapp.controllers.enums.ViewNames;
 import edu.uark.registerapp.models.api.ApiResponse;
 import edu.uark.registerapp.models.api.Product;
 
-@RestController
+@RestController //supports rest API JC
 @RequestMapping(value = "/api/product")
 public class ProductRestController extends BaseRestController {
 	@RequestMapping(value = "/", method = RequestMethod.POST)
@@ -53,6 +53,10 @@ public class ProductRestController extends BaseRestController {
 	) {
 
 		// TODO: Verify that the user associated with the current session is elevated
+		//if employee != manager
+		//{
+		//    document.getElementById("Create New").style.visibility = "visible";		       
+		//}
 
 		return this.productUpdateCommand
 			.setProductId(productId)

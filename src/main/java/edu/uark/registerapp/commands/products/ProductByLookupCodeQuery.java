@@ -48,5 +48,3 @@ public class ProductByLookupCodeQuery implements ResultCommandInterface<Product>
 	@Autowired
 	private ProductRepository productRepository;
 }
-
-//Jackson Carlton 02/18/2020
