@@ -15,8 +15,8 @@ import edu.uark.registerapp.controllers.enums.ViewModelNames;
 import edu.uark.registerapp.controllers.enums.ViewNames;
 import edu.uark.registerapp.models.api.Product;
 
-@Controller
-@RequestMapping(value = "/productDetail")
+@Controller //2 Route endpoints for this class JC
+@RequestMapping(value = "/productDetail") //whenever request is recieved at this URL, it will be mapped to this class JC
 public class ProductDetailRouteController {
 	@RequestMapping(method = RequestMethod.GET)
 	public ModelAndView start() {
@@ -26,15 +26,15 @@ public class ProductDetailRouteController {
 				(new Product()).setLookupCode(StringUtils.EMPTY).setCount(0));
 	}
 
-	@RequestMapping(value = "/{productId}", method = RequestMethod.GET)
+	@RequestMapping(value = "/{productId}", method = RequestMethod.GET) //Curly brace indicates that value will come from HTTP request (URL) JC
 	public ModelAndView startWithProduct(@PathVariable final UUID productId) {
 		final ModelAndView modelAndView =
 			new ModelAndView(ViewNames.PRODUCT_DETAIL.getViewName());
 
 		try {
 			modelAndView.addObject(
-				ViewModelNames.PRODUCT.getValue(),
-				this.productQuery.setProductId(productId).execute());
+				ViewModelNames.PRODUCT.getValue(), //lookup key JC
+				this.productQuery.setProductId(productId).execute()); //data associated w key JC
 		} catch (final Exception e) {
 			modelAndView.addObject(
 				ViewModelNames.ERROR_MESSAGE.getValue(),
