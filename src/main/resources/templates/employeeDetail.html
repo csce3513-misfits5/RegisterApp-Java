@@ -15,7 +15,7 @@
 	<div class="header">
 		<h1 class="primary-message">Employee Detail</h1>
 	</div>
-		
+
 	<div id="main" class="main">
 		<div id="error" th:class="${#strings.isEmpty(errorMessage)} ? hidden : ''">
 			<h4 id="errorMessage" class="error-message" th:text="${errorMessage}"></h4>
@@ -43,6 +43,39 @@
 						</td>
 					</tr>
 					<!-- TODO: Other employee inputs -->
+					<form action="/action_page.php" method = "POST" onsubmit="myFunction()">
+				  <label for="fName">First name:</label>
+				  <input type="text" id="fName" name="fName"><br><br>
+					<label for="lName">Last name:</label>
+				  <input type="text" id="lName" name="lName"><br><br>
+				  <label for="password">Password:</label>
+				  <input type="password" id="password" name="password"><br><br>
+					<label for="passwordConfirm">Confirm password:</label>
+				  <input type="passwordConfirm" id="passwordConfirm" name="passwordConfirm"><br><br>
+
+					<label for="employeeType">Choose an employee type:</label>
+					<select id="employeeType">
+  				<option value="cashier">Cashier</option>
+  				<option value="shiftManager">Shift Manager</option>
+  				<option value="shiftManager">General Manager</option><br><br>
+					</select>
+					<br>
+					<input type="submit" value="Save">
+					</form>
+
+					<!--
+					Input element[1] of type text[2] for the first name
+◦ Input element[1] of type text[2] for the last name
+◦ Input element[1] of type text[2] for the password
+◦ Input element[1] of type text[2] for the confirm password
+◦ Select element[4] to select the employee type
+▪ “Cashier”
+▪ “Shift Manager”
+▪ “General Manager”
+◦ Button element[5] with text “Save”
+▪ Will make an HTTP PUT request to the server with the employee details when clicked[6]
+-->
+
 				</tbody>
 			</table>
 		</div>
@@ -62,9 +95,12 @@
 	</div>
 
 	<div class="footer" th:classappend="${employee.isInitialEmployee} ? hidden : ''">
-		<img id="signOutImage" src="/images/Sign-Out.png" alt="Sign Out" class="footer" />
+		<img id="signOutImage" src="Sign-Out.svg" alt="Sign Out" class="footer" />
+		<img border="0" alt="Sign out" src="Sign-Out.svg" width="50" height="50">
+		<!-- Needs to navigate to the sign in page and neither of these work right now  -->
 	</div>
 
 </body>
 
 </html>
+
