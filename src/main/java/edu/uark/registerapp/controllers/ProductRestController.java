@@ -55,7 +55,7 @@ public class ProductRestController extends BaseRestController {
 		// TODO: Verify that the user associated with the current session is elevated
 		//if employee != manager
 		//{
-		//    document.getElementById("Create New").style.visibility = "visible";		       
+		//    document.getElementById("Create New").style.visibility = "hidden";		       
 		//}
 
 		return this.productUpdateCommand
