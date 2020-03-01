@@ -1,0 +1,50 @@
+<html xmlns:th="https://www.thymeleaf.org">
+
+<head>
+	<title>Main Menu</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="/styles/master.css">
+
+	<script type="text/javascript" src="/scripts/master.js" defer></script>
+
+</head>
+
+<body>
+	<div class="header">
+		<h1 class="mainMenu">Main Menu</h1>
+	</div>
+
+	<div id="main" class="main">
+		<div id="error" th:class="${#strings.isEmpty(errorMessage)} ? hidden : ''">
+			<h4 id="errorMessage" class="error-message" th:text="${errorMessage}"></h4>
+		</div>
+	</div>
+
+<button type="button" onclick="alert('Server Side')">Start Transaction</button>
+<br> </br>
+<button type="button" onclick="alert('Server Side')">View Products</button>
+<br> </br>
+
+<button type="button" onclick="alert('Server Side')">Create Employee</button>
+<br> </br>
+<button type="button" onclick="alert('Server Side')">Sales Report</button>
+<br> </br>
+<button type="button" onclick="alert('Server Side')">Cashier Report</button>
+<br> </br>
+
+<a href="https://www.w3schools.com"> <! –– This will go to whatever server webpage we are hosting ––>
+
+<img border="0" alt="Sign out" src="Sign-Out.svg" width="50" height="50">
+</a>
+
+
+
+
+
+
+</body>
+
+
+</html>
+
