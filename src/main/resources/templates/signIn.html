@@ -9,11 +9,14 @@
 	<script type="text/javascript" src="/scripts/master.js" defer></script>
 
 	<script defer>
+
 		function myFunction() {
   	alert("The form was submitted but this needs to be the client side function");
+		// this functions hould be done by Sarah I believe; Should be fairly simple
 		}
+
 	</script>
-	
+
 
 </head>
 
@@ -28,7 +31,8 @@
 		</div>
 	</div>
 
-	<form action="/action_page.php" method = "POST" onsubmit="myFunction()">
+<!-- I'm not sure where to send the information yet, for right now it's going to /signIn -->
+	<form action="/signIn" method = "POST" onsubmit="myFunction()">
   <label for="employeeId">Employee ID:</label>
   <input type="number" id="employeeId" name="employeeId"><br><br>
   <label for="password">Password:</label>

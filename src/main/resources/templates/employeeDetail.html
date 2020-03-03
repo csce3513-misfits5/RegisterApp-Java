@@ -21,6 +21,8 @@
 			<h4 id="errorMessage" class="error-message" th:text="${errorMessage}"></h4>
 		</div>
 
+
+
 		<div class="inputContent">
 			<table id="employeeDetails">
 				<tbody>
@@ -42,8 +44,8 @@
 							<input id="employeeEmployeeId" type="text" th:value="${!employee.isEmpty} ? ${employee.employeeId} : ''" class="update" disabled />
 						</td>
 					</tr>
-					<!-- TODO: Other employee inputs -->
-					<form action="/action_page.php" method = "POST" onsubmit="myFunction()">
+					<!-- TODO: Other employee inputs
+					<form action="" method = "POST" onsubmit="myFunction()"> -->
 				  <label for="fName">First name:</label>
 				  <input type="text" id="fName" name="fName"><br><br>
 					<label for="lName">Last name:</label>
@@ -51,7 +53,8 @@
 				  <label for="password">Password:</label>
 				  <input type="password" id="password" name="password"><br><br>
 					<label for="passwordConfirm">Confirm password:</label>
-				  <input type="passwordConfirm" id="passwordConfirm" name="passwordConfirm"><br><br>
+					<!-- JS function to make sure the passwords are the same? -->
+				  <input type="password" id="passwordConfirm" name="passwordConfirm"><br><br>
 
 					<label for="employeeType">Choose an employee type:</label>
 					<select id="employeeType">
@@ -60,9 +63,11 @@
   				<option value="shiftManager">General Manager</option><br><br>
 					</select>
 					<br>
-					<input type="submit" value="Save">
+					<button type="button" onclick="alert('Saved!')">Save </button>
+					<!-- Need the server side to do a put request -- >
 					</form>
 
+					<br>
 					<!--
 					Input element[1] of type text[2] for the first name
 ◦ Input element[1] of type text[2] for the last name
@@ -93,12 +98,14 @@
 			</div>
 		</div>
 	</div>
-
+<!--
 	<div class="footer" th:classappend="${employee.isInitialEmployee} ? hidden : ''">
-		<img id="signOutImage" src="Sign-Out.svg" alt="Sign Out" class="footer" />
-		<img border="0" alt="Sign out" src="Sign-Out.svg" width="50" height="50">
-		<!-- Needs to navigate to the sign in page and neither of these work right now  -->
+		 Needs to navigate to the sign in page and neither of these work right now  -->
 	</div>
+
+	<a href="https://misfits5-app.herokuapp.com/"> <! –– This will go to whatever webpage we are hosting where the sign in is ––>
+	<img border="0" alt="Sign out" src="Sign-Out.svg" width="50" height="50">
+	</a>
 
 </body>
 
