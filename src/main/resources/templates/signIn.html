@@ -11,8 +11,25 @@
 	<script defer>
 
 		function myFunction() {
-  	alert("The form was submitted but this needs to be the client side function");
-		// this functions hould be done by Sarah I believe; Should be fairly simple
+  	        	alert("The form was submitted but this needs to be the client side function");
+			var employeeId = document.getElementByID("f1").employeeId.value; //getting value submitted for employee id
+			if(isNaN(employeeId)) //if ID entered is Not a Number reject it 
+			{
+				alert("Please enter a numeric value for Employee ID"); //alet that wrong type of value
+				return false;
+			}
+			else
+			{
+				return true; 
+			}
+			
+			var password = document.getElementById("f1").password.value; //getting value submitted for password
+			if( password === "") //check if password is blank
+			{
+				return false;
+			}
+			else { return true; } //if not blank it is accepted
+			
 		}
 
 	</script>
@@ -32,7 +49,7 @@
 	</div>
 
 <!-- I'm not sure where to send the information yet, for right now it's going to /signIn -->
-	<form action="/signIn" method = "POST" onsubmit="myFunction()">
+	<form action="/signIn" method = "POST" onsubmit="myFunction()" id="f1">
   <label for="employeeId">Employee ID:</label>
   <input type="number" id="employeeId" name="employeeId"><br><br>
   <label for="password">Password:</label>
