@@ -31,5 +31,5 @@ a.button {
 
 #createNew
 {
-	visibility: hidden
+	visibility: visible;
 }
