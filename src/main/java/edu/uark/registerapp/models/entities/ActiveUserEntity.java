@@ -87,5 +87,15 @@ public class ActiveUserEntity {
 		this.name = StringUtils.EMPTY;
 		this.employeeId = new UUID(0, 0);
 		this.sessionKey = StringUtils.EMPTY;
+	}
+	
+	//Created this so could create new ActiveUser in EmployeeSignInCommand.java
+	public ActiveUserEntity(UUID uuid, int classification, String name, UUID empID, String key) 
+	{
+		this.id = new UUID(0,0);
+		this.classification = classification;
+		this.name = name;
+		this.employeeId = empID;
+		this.sessionKey = key;
     }
 }
