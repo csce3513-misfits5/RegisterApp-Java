@@ -5,7 +5,7 @@ public enum ViewModelNames {
 	ERROR_MESSAGE("errorMessage"),
 	PRODUCTS("products"), // Product listing
 	PRODUCT("product"), 
-	EMPLOYEE_TYPES(""), //Might need to adjust later JC
+	EMPLOYEE_TYPES("employeeTypes"), //Might need to adjust later JC
 	; // Product detail
 	
 	public String getValue() {

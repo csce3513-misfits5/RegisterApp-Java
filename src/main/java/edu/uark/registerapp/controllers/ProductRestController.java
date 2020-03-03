@@ -57,6 +57,7 @@ public class ProductRestController extends BaseRestController {
 		//{
 		//    document.getElementById("Create New").style.visibility = "hidden";		       
 		//}
+		//if(this.)
 
 		return this.productUpdateCommand
 			.setProductId(productId)
