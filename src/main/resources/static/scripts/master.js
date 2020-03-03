@@ -4,7 +4,24 @@ document.addEventListener("DOMContentLoaded", () => {
 		signOutActionElement.addEventListener("click", signOutActionClickHandler);
 	}
 });
+document.getElementById("signOut").addEventListener("click", makeRequest);
 
+function makeRequest() {
+	var xhttp = new XMLHttpRequest();
+	XMLHttpRequest.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+			document.getElementById("demo").innerHTML = this.responseText;
+			// use ajaxDelete() but don't know how to call it at the moment
+		}
+	};
+XMLHttpRequest.open("GET", "ajax_info.txt", true);
+XMLHttpRequest.send();
+
+  
+ 
+	location.replace("https://www.w3schools.com") // Navigate to the sign in page
+  }
+  
 // AJAX
 function ajaxGet(resourceRelativeUri, callback) {
 	return ajax(resourceRelativeUri, "GET", null, callback);
