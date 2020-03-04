@@ -16,7 +16,7 @@ import edu.uark.registerapp.controllers.enums.ViewNames;
 import edu.uark.registerapp.models.api.Product;
 
 @Controller //2 Route endpoints for this class JC
-@RequestMapping(value = "/productDetail") //whenever request is recieved at this URL, it will be mapped to this class JC
+@RequestMapping(value = "/") //whenever request is recieved at this URL, it will be mapped to this class JC
 public class ProductDetailRouteController {
 	@RequestMapping(method = RequestMethod.GET)
 	public ModelAndView start() {
