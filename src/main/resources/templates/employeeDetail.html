@@ -8,6 +8,50 @@
 
 	<script type="text/javascript" src="/scripts/master.js" defer></script>
 	<script type="text/javascript" src="/scripts/employeeDetail.js" defer></script>
+	<script defer>
+	function myFunction()
+	{
+		var firstn = getElementById("fName").value;
+		var lastn = getElementById("lName").value;
+		var password = getElementById("password").value;
+		var passconfirm = getElementById("passwordConfirm").value;
+		var etype = getElementById("employeeType");
+		
+		if(firstn === "") //first name cant be blank
+		{
+			alert("Please enter your first name");
+			return false;
+		}
+		
+		if(lastn === "") //last name cant be blank
+		{
+			alert("Please enter your last name");
+			return false;
+		}
+		
+		if(password == "") //password cant be blank
+		{
+			alert("Please enter your password");
+			return false;
+		}
+		
+		if(password != passconfirm) //password and passwordConfirm must match
+		{
+			alert("Passwords do not match");
+			return false;
+		}
+		
+		if(etype.value) //employeeType must be one of the selected options
+		{
+			return true;
+		}
+		else //if it is not then create an alert
+		{
+			alert("This is not a valid type of employee");
+			return false;
+		}		
+	}	
+	</script>
 </head>
 
 <body>
