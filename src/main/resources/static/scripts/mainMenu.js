@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function(event) {
 	getStartTransactionActionElement().addEventListener(
 		"click",
-		() => { displayError("Functionality has not yet been implemented."); });
+		() => { window.location.assign("/startTransaction"); });
 
 	getViewProductsActionElement().addEventListener(
 		"click",
@@ -13,11 +13,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 	getProductSalesReportActionElement().addEventListener(
 		"click",
-		() => { displayError("Functionality has not yet been implemented."); });
+		() => { window.location.assign("/productSalesReport"); });
 
 	getCashierSalesReportActionElement().addEventListener(
 		"click",
-		() => { displayError("Functionality has not yet been implemented."); });
+		() => { window.location.assign("/cashierSalesReport"); });
 });
 
 // Getters and setters
